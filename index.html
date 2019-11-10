@@ -152,6 +152,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-登录注册" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/10/登录注册/">登录注册</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/10/登录注册/" class="archive-article-date">
+  	<time datetime="2019-11-10T01:11:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#<br>req.setCharacterEncoding(“utf-8”);//请求的编码格式<br>resp.setContentType(“text/html;charset=utf-8”);//响应的编码格式<br>String name=req.getParameter(“username”);//获取单个、指定参数的值<br>String password=req.getParameter(“password”);//获取单个、指定参数的值<br>resp.sendRedirect(“login.jsp”);//重定向<br>req.getRequestDispatcher(“res2.jsp”).forward(req, resp);//跳转<br>private static String driverClassName=”com.mysql.cj.jdbc.Driver”;//启动驱动<br>private String url=”jdbc:mysql://127.0.0.1:3306/stu?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai”;//设置连接路径<br>private String user=”root”;//数据库用户名<br>private String passwd=”123456”;//数据库连接密码<br> static{<br>        try{<br>            //1.加载驱动<br>            Class.forName(driverClassName);<br>        }catch(ClassNotFoundException e){<br>            e.printStackTrace();<br>        }<br>    }<br>    /**<br>     * 通过账号获取密码<br>     * name<br>     */<br>    public String getPassword(String username) {<br>        Connection conn=null;//连接<br>        PreparedStatement  ps=null;//陈述<br>        ResultSet rs=null;<br>        try{<br>            //2.获取连接<br>            conn=DriverManager.getConnection(url,user,passwd);<br>            //3.编写sql语句<br>            String sql = “select password from user where username=?”;<br>            //4.获取陈述对象<br>            ps=conn.prepareStatement(sql);<br>            ps.setString(1, username);<br>            //5.执行sql语句，获得结果<br>            rs=ps.executeQuery();//执行   疑问<br>            //遍历结果集<br>public String insertPassServlet(String name, String password) {<br>        Connection conn=null;<br>        PreparedStatement ps=null;<br>        try{<br>            conn=DriverManager.getConnection(url,user,passwd);<br>            String sql=”insert into  user (username,password) values(?,?)”;<br>            ps=conn.prepareStatement(sql);<br>            //设置占位符<br>            ps.setString(1,name);<br>            ps.setString(2,password);<br>            int i=ps.executeUpdate();<br>            return “更新了”+i+”行数据”;<br>        }catch(SQLException e){<br>            e.printStackTrace();<br>        }finally{<br>            try{<br>                if(ps!=null){<br>                    ps.close();<br>                }<br>                if(conn!=null){<br>                    conn.close();<br>                }<br>                }catch(Exception e){<br>                  System.out.println(“数据库关闭发生错误”);<br>               }<br>        }<br>        return null;<br>    }</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/10/登录注册/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-jsp表单接收" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

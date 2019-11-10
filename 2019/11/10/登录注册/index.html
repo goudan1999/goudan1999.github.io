@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jsp表单接收 | Hexo</title>
+  <title>登录注册 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#ISP表单   账号   密码    接收  resp.setContentType(&quot;text/html;charset=utf-8&quot;);//使用什么编码读客户端发过来的二进制数据,需要与HTML编码保持一致。在TOMCAT中，如果是get方法传过来的数据，可能不起作用。  String sno=req.getParameter(&amp;quot;maths&amp;quot;);//获取单个、指定参数的值">
+  <meta name="description" content="#req.setCharacterEncoding(“utf-8”);//请求的编码格式resp.setContentType(“text/html;charset=utf-8”);//响应的编码格式String name=req.getParameter(“username”);//获取单个、指定参数的值String password=req.getParameter(“password”);/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jsp表单接收">
-<meta property="og:url" content="http://yoursite.com/2019/11/02/jsp表单接收/index.html">
+<meta property="og:title" content="登录注册">
+<meta property="og:url" content="http://yoursite.com/2019/11/10/登录注册/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#ISP表单   账号   密码    接收  resp.setContentType(&quot;text/html;charset=utf-8&quot;);//使用什么编码读客户端发过来的二进制数据,需要与HTML编码保持一致。在TOMCAT中，如果是get方法传过来的数据，可能不起作用。  String sno=req.getParameter(&amp;quot;maths&amp;quot;);//获取单个、指定参数的值">
+<meta property="og:description" content="#req.setCharacterEncoding(“utf-8”);//请求的编码格式resp.setContentType(“text/html;charset=utf-8”);//响应的编码格式String name=req.getParameter(“username”);//获取单个、指定参数的值String password=req.getParameter(“password”);/">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-02T01:47:53.240Z">
+<meta property="og:updated_time" content="2019-11-10T01:17:29.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jsp表单接收">
-<meta name="twitter:description" content="#ISP表单   账号   密码    接收  resp.setContentType(&quot;text/html;charset=utf-8&quot;);//使用什么编码读客户端发过来的二进制数据,需要与HTML编码保持一致。在TOMCAT中，如果是get方法传过来的数据，可能不起作用。  String sno=req.getParameter(&amp;quot;maths&amp;quot;);//获取单个、指定参数的值">
+<meta name="twitter:title" content="登录注册">
+<meta name="twitter:description" content="#req.setCharacterEncoding(“utf-8”);//请求的编码格式resp.setContentType(“text/html;charset=utf-8”);//响应的编码格式String name=req.getParameter(“username”);//获取单个、指定参数的值String password=req.getParameter(“password”);/">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,40 +154,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jsp表单接收" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-登录注册" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jsp表单接收
+      登录注册
     </h1>
   
 
         
-        <a href="/2019/11/02/jsp表单接收/" class="archive-article-date">
-  	<time datetime="2019-11-02T01:45:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-02</time>
+        <a href="/2019/11/10/登录注册/" class="archive-article-date">
+  	<time datetime="2019-11-10T01:11:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#<br>ISP表单</p>
-<form action="acc" method="get" target="_blank">
-<input type="text" name="maths"> 账号
-<br>
-<input type="password" name="physics"> 密码
-<br>
-<input type="submit" value="登录">
-</form>
-接收
- resp.setContentType("text/html;charset=utf-8");//使用什么编码读客户端发过来的二进制数据,需要与HTML编码保持一致。在TOMCAT中，如果是get方法传过来的数据，可能不起作用。
+        <p>#<br>req.setCharacterEncoding(“utf-8”);//请求的编码格式<br>resp.setContentType(“text/html;charset=utf-8”);//响应的编码格式<br>String name=req.getParameter(“username”);//获取单个、指定参数的值<br>String password=req.getParameter(“password”);//获取单个、指定参数的值<br>resp.sendRedirect(“login.jsp”);//重定向<br>req.getRequestDispatcher(“res2.jsp”).forward(req, resp);//跳转<br>private static String driverClassName=”com.mysql.cj.jdbc.Driver”;//启动驱动<br>private String url=”jdbc:mysql://127.0.0.1:3306/stu?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai”;//设置连接路径<br>private String user=”root”;//数据库用户名<br>private String passwd=”123456”;//数据库连接密码<br> static{<br>        try{<br>            //1.加载驱动<br>            Class.forName(driverClassName);<br>        }catch(ClassNotFoundException e){<br>            e.printStackTrace();<br>        }<br>    }<br>    /**<br>     * 通过账号获取密码<br>     * name<br>     */<br>    public String getPassword(String username) {<br>        Connection conn=null;//连接<br>        PreparedStatement  ps=null;//陈述<br>        ResultSet rs=null;<br>        try{<br>            //2.获取连接<br>            conn=DriverManager.getConnection(url,user,passwd);<br>            //3.编写sql语句<br>            String sql = “select password from user where username=?”;<br>            //4.获取陈述对象<br>            ps=conn.prepareStatement(sql);<br>            ps.setString(1, username);<br>            //5.执行sql语句，获得结果<br>            rs=ps.executeQuery();//执行   疑问<br>            //遍历结果集<br>public String insertPassServlet(String name, String password) {<br>        Connection conn=null;<br>        PreparedStatement ps=null;<br>        try{<br>            conn=DriverManager.getConnection(url,user,passwd);<br>            String sql=”insert into  user (username,password) values(?,?)”;<br>            ps=conn.prepareStatement(sql);<br>            //设置占位符<br>            ps.setString(1,name);<br>            ps.setString(2,password);<br>            int i=ps.executeUpdate();<br>            return “更新了”+i+”行数据”;<br>        }catch(SQLException e){<br>            e.printStackTrace();<br>        }finally{<br>            try{<br>                if(ps!=null){<br>                    ps.close();<br>                }<br>                if(conn!=null){<br>                    conn.close();<br>                }<br>                }catch(Exception e){<br>                  System.out.println(“数据库关闭发生错误”);<br>               }<br>        }<br>        return null;<br>    }</p>
 
-<pre><code>String sno=req.getParameter(&quot;maths&quot;);//获取单个、指定参数的值
-String sno1=req.getParameter(&quot;physics&quot;);//获取单个、指定参数的值
-resp.getWriter().print(&quot;账号&quot;+sno+&quot;\n密码&quot;+sno1);</code></pre>
       
 
       
@@ -266,7 +254,7 @@ resp.getWriter().print(&quot;账号&quot;+sno+&quot;\n密码&quot;+sno1);</code>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/02/jsp表单接收/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/10/登录注册/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,18 +268,9 @@ resp.getWriter().print(&quot;账号&quot;+sno+&quot;\n密码&quot;+sno1);</code>
   
 <nav id="article-nav">
   
-    <a href="/2019/11/10/登录注册/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          登录注册
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/16/查询数数据/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">查询数数据</div>
+    <a href="/2019/11/02/jsp表单接收/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jsp表单接收</div>
       <i class="icon-circle-right"></i>
     </a>
   
